@@ -4,6 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .color-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .color-table th,
+        .color-table td {
+            border: 2px solid #444;
+            padding: 12px;
+        }
+        .color-table th {
+            background: #333;
+            color: #fff;
+        }
+        .color-table tbody tr:nth-child(1) td { background: #ffcccc; }
+        .color-table tbody tr:nth-child(2) td { background: #ccffcc; }
+        .color-table tbody tr:nth-child(3) td { background: #ccccff; }
+        .color-table tbody tr:nth-child(4) td { background: #ffffcc; }
+        .color-table tbody tr:hover td {
+            background: #f0e68c;
+            transform: scale(1.01);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+        }
+        .color-table tbody tr:hover td:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+        .color-table tbody tr:hover td:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+        .color-table td {
+            transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+    </style>
 </head>
 <body>
     <h1>
@@ -58,5 +94,36 @@
     
 </P>
     <hr>
+    <table class="color-table">
+        <thead>
+            <tr>
+                <th>項目 1</th>
+                <th>項目 2</th>
+                <th>項目 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>內容 A1</td>
+                <td>內容 A2</td>
+                <td>內容 A3</td>
+            </tr>
+            <tr>
+                <td>內容 B1</td>
+                <td>內容 B2</td>
+                <td>內容 B3</td>
+            </tr>
+            <tr>
+                <td>內容 C1</td>
+                <td>內容 C2</td>
+                <td>內容 C3</td>
+            </tr>
+            <tr>
+                <td>內容 D1</td>
+                <td>內容 D2</td>
+                <td>內容 D3</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
