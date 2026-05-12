@@ -2,3 +2,8 @@
 - Thumb.db
 - Desktop.ini
 - application.dll
+
+/VS Code system files
+
+*.log
+*.tmp
